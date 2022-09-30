@@ -1,0 +1,14 @@
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.exe
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.deps.json
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.runtimeconfig.json
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.runtimeconfig.dev.json
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.dll
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.pdb
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.csproj.AssemblyReference.cache
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.AssemblyInfoInputs.cache
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.AssemblyInfo.cs
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.csproj.CoreCompileInputs.cache
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.dll
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.pdb
+D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.genruntimeconfig.cache

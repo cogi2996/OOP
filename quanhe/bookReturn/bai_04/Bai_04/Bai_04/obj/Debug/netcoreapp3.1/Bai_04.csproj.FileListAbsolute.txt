@@ -1,0 +1,14 @@
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\bin\Debug\netcoreapp3.1\Bai_04.exe
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\bin\Debug\netcoreapp3.1\Bai_04.deps.json
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\bin\Debug\netcoreapp3.1\Bai_04.runtimeconfig.json
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\bin\Debug\netcoreapp3.1\Bai_04.runtimeconfig.dev.json
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\bin\Debug\netcoreapp3.1\Bai_04.dll
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\bin\Debug\netcoreapp3.1\Bai_04.pdb
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.csproj.AssemblyReference.cache
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.AssemblyInfoInputs.cache
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.AssemblyInfo.cs
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.csproj.CoreCompileInputs.cache
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.dll
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.pdb
+D:\OOP\quanhe\bookReturn\bai_04\Bai_04\Bai_04\obj\Debug\netcoreapp3.1\Bai_04.genruntimeconfig.cache

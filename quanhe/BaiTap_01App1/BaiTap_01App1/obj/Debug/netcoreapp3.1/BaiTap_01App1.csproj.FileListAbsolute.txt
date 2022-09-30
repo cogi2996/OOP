@@ -1,0 +1,14 @@
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\bin\Debug\netcoreapp3.1\BaiTap_01App1.exe
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\bin\Debug\netcoreapp3.1\BaiTap_01App1.deps.json
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\bin\Debug\netcoreapp3.1\BaiTap_01App1.runtimeconfig.json
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\bin\Debug\netcoreapp3.1\BaiTap_01App1.runtimeconfig.dev.json
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\bin\Debug\netcoreapp3.1\BaiTap_01App1.dll
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\bin\Debug\netcoreapp3.1\BaiTap_01App1.pdb
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.csproj.AssemblyReference.cache
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.AssemblyInfoInputs.cache
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.AssemblyInfo.cs
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.csproj.CoreCompileInputs.cache
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.dll
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.pdb
+D:\OOP\quanhe\BaiTap_01App1\BaiTap_01App1\obj\Debug\netcoreapp3.1\BaiTap_01App1.genruntimeconfig.cache
