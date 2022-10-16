@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj": {}
+    "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj": {}
   },
   "projects": {
-    "D:\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj": {
+    "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj",
+        "projectUniqueName": "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj",
         "projectName": "Baitap_05",
-        "projectPath": "D:\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj",
+        "projectPath": "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\Baitap_05.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\obj\\",
+        "outputPath": "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_05\\Baitap_05\\Baitap_05\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

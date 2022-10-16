@@ -1,0 +1,14 @@
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.csproj.AssemblyReference.cache
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.AssemblyInfoInputs.cache
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.AssemblyInfo.cs
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.csproj.CoreCompileInputs.cache
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\bin\Debug\netcoreapp3.1\baitap_03.exe
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\bin\Debug\netcoreapp3.1\baitap_03.deps.json
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\bin\Debug\netcoreapp3.1\baitap_03.runtimeconfig.json
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\bin\Debug\netcoreapp3.1\baitap_03.runtimeconfig.dev.json
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\bin\Debug\netcoreapp3.1\baitap_03.dll
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\bin\Debug\netcoreapp3.1\baitap_03.pdb
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.dll
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.pdb
+D:\OOP\OOP\tuan_08\baitap_03\baitap_03\baitap_03\obj\Debug\netcoreapp3.1\baitap_03.genruntimeconfig.cache

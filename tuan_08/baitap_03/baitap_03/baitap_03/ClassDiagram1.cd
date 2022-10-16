@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="baitap_03.MONHOC">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABAAAAAAAAAAAACAABAAQAAQACAAAAAAAAAQBAAA=</HashCode>
+      <FileName>MONHOC.cs</FileName>
+      <NewMemberFileName>MonHoc.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="baitap_03.LOPHOC" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAEAAQEAAAEAEAAABAAAAAEAAAEAAAABAAAAAAA=</HashCode>
+      <FileName>LOPHOC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="baitap_03.SINHVIEN" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAABAAAARgAQBAEAACBBEAAAABAAAAAAgAAAAAABAA=</HashCode>
+      <FileName>SINHVIEN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="baitap_03.Program" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

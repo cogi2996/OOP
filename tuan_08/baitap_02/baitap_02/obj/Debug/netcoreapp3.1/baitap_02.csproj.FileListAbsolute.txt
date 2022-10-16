@@ -1,0 +1,14 @@
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\bin\Debug\netcoreapp3.1\baitap_02.exe
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\bin\Debug\netcoreapp3.1\baitap_02.deps.json
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\bin\Debug\netcoreapp3.1\baitap_02.runtimeconfig.json
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\bin\Debug\netcoreapp3.1\baitap_02.runtimeconfig.dev.json
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\bin\Debug\netcoreapp3.1\baitap_02.dll
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\bin\Debug\netcoreapp3.1\baitap_02.pdb
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.csproj.AssemblyReference.cache
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.AssemblyInfoInputs.cache
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.AssemblyInfo.cs
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.csproj.CoreCompileInputs.cache
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.dll
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.pdb
+D:\OOP\OOP\tuan_08\baitap_02\baitap_02\obj\Debug\netcoreapp3.1\baitap_02.genruntimeconfig.cache

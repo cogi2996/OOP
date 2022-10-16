@@ -12,3 +12,17 @@ D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\B
 D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.dll
 D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.pdb
 D:\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.genruntimeconfig.cache
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.exe
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.deps.json
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.runtimeconfig.json
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.runtimeconfig.dev.json
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.dll
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\bin\Debug\netcoreapp3.1\Baitap_05.pdb
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.csproj.AssemblyReference.cache
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.AssemblyInfoInputs.cache
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.AssemblyInfo.cs
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.csproj.CoreCompileInputs.cache
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.dll
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.pdb
+D:\OOP\OOP\quanhe\bookReturn\BaiTap_05\Baitap_05\Baitap_05\obj\Debug\netcoreapp3.1\Baitap_05.genruntimeconfig.cache
