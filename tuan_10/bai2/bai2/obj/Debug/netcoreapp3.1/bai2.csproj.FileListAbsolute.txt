@@ -1,0 +1,14 @@
+D:\OOP\OOP\tuan_10\bai2\bai2\bin\Debug\netcoreapp3.1\bai2.exe
+D:\OOP\OOP\tuan_10\bai2\bai2\bin\Debug\netcoreapp3.1\bai2.deps.json
+D:\OOP\OOP\tuan_10\bai2\bai2\bin\Debug\netcoreapp3.1\bai2.runtimeconfig.json
+D:\OOP\OOP\tuan_10\bai2\bai2\bin\Debug\netcoreapp3.1\bai2.runtimeconfig.dev.json
+D:\OOP\OOP\tuan_10\bai2\bai2\bin\Debug\netcoreapp3.1\bai2.dll
+D:\OOP\OOP\tuan_10\bai2\bai2\bin\Debug\netcoreapp3.1\bai2.pdb
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.csproj.AssemblyReference.cache
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.AssemblyInfoInputs.cache
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.AssemblyInfo.cs
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.csproj.CoreCompileInputs.cache
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.dll
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.pdb
+D:\OOP\OOP\tuan_10\bai2\bai2\obj\Debug\netcoreapp3.1\bai2.genruntimeconfig.cache
