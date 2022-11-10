@@ -33,5 +33,9 @@ namespace bai2
         {
             return getRate() * getWrokingHoures();
         }
+        public override string toString()
+        {
+            return base.toString() +"Pay:" + pay().ToString();
+        }
     }
 }

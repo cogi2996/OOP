@@ -45,6 +45,11 @@ namespace bai2
             return lastName;
         }
         abstract public double pay() ;
+        public virtual string  toString()
+        {
+            string kq = $"Name :{lastName} {firstName}\nempCode: {empCode}\n";
+            return kq;
+        }
       
     }
 }

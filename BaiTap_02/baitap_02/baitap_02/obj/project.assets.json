@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OOP\\BaiTap_02\\baitap_02\\baitap_02\\baitap_02.csproj",
+      "projectUniqueName": "D:\\OOP\\OOP\\BaiTap_02\\baitap_02\\baitap_02\\baitap_02.csproj",
       "projectName": "baitap_02",
-      "projectPath": "D:\\OOP\\BaiTap_02\\baitap_02\\baitap_02\\baitap_02.csproj",
+      "projectPath": "D:\\OOP\\OOP\\BaiTap_02\\baitap_02\\baitap_02\\baitap_02.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\OOP\\BaiTap_02\\baitap_02\\baitap_02\\obj\\",
+      "outputPath": "D:\\OOP\\OOP\\BaiTap_02\\baitap_02\\baitap_02\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

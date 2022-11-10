@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Collections;
 
 namespace BaiTap_01App1
 {
-    class Date
+    public class Date
     {
         private int _ngay, _thang, _nam;
         public string showTime()
@@ -38,6 +37,9 @@ namespace BaiTap_01App1
             this._thang = thang;
             this._nam = nam;
         }
+
+     
+       
         
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OOP\\quanhe\\bookReturn\\BaiTap_03\\BaiTap_03\\BaiTap_03\\BaiTap_03.csproj",
+      "projectUniqueName": "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_03\\BaiTap_03\\BaiTap_03\\BaiTap_03.csproj",
       "projectName": "BaiTap_03",
-      "projectPath": "D:\\OOP\\quanhe\\bookReturn\\BaiTap_03\\BaiTap_03\\BaiTap_03\\BaiTap_03.csproj",
+      "projectPath": "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_03\\BaiTap_03\\BaiTap_03\\BaiTap_03.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\OOP\\quanhe\\bookReturn\\BaiTap_03\\BaiTap_03\\BaiTap_03\\obj\\",
+      "outputPath": "D:\\OOP\\OOP\\quanhe\\bookReturn\\BaiTap_03\\BaiTap_03\\BaiTap_03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,14 @@
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\bin\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.exe
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\bin\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.deps.json
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\bin\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.runtimeconfig.json
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\bin\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.runtimeconfig.dev.json
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\bin\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.dll
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\bin\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.pdb
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.csproj.AssemblyReference.cache
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.AssemblyInfoInputs.cache
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.AssemblyInfo.cs
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.csproj.CoreCompileInputs.cache
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.dll
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.pdb
+D:\OOP\OOP\DoAnCuoiKy\PhanMemQuanLyNhanVien\PhanMemQuanLyNhanVien\obj\Debug\netcoreapp3.1\PhanMemQuanLyNhanVien.genruntimeconfig.cache
