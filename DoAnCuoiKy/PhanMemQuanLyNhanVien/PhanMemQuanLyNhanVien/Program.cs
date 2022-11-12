@@ -178,7 +178,7 @@ namespace PhanMemQuanLyNhanVien
             //    } while (choice  == 2);
             //    
             //}
-            static void NhapNhanVien(List<NhanVien> list)
+            static void NhapThongTinNhanVien(List<NhanVien> list)
             {
                 int choice;
                 do
@@ -192,7 +192,7 @@ namespace PhanMemQuanLyNhanVien
                         Console.Clear();
                         lapTrinhVien.NhapThongtin();
                         list.Add(lapTrinhVien);
-                        NhapNhanVien(list);
+                        NhapThongTinNhanVien(list);
                         choice = 3;// thang cuoi cung out thi thang con cung out
                     }
                     else if (choice ==2)
@@ -202,13 +202,20 @@ namespace PhanMemQuanLyNhanVien
                         Console.Clear();
                         KiemChungVien.NhapThongtin();
                         list.Add(KiemChungVien);
-                        NhapNhanVien(list);
+                        NhapThongTinNhanVien(list);
                         choice = 3;// thang cuoi cung out thi thang con cung out
                     }
 
 
 
                 } while (choice !=3);
+            }
+            static void SuaThongTinNhanVien(List<NhanVien> list)
+            {
+                int choice = 0;
+                do
+                {
+                } while (choice != 3);
             }
             static void QuanLy(int choice, Admin admin, List<NhanVien> list)
             {
@@ -228,9 +235,14 @@ namespace PhanMemQuanLyNhanVien
                             }
                         case 2:
                             {
-                                NhapNhanVien(list);
+                                NhapThongTinNhanVien(list);
                                 Console.WriteLine(list.Count);
                                 Console.ReadKey();
+                                break;
+                            }
+                        case 3:
+                            {
+                                SuaThongTinNhanVien(list);
                                 break;
                             }
                     }

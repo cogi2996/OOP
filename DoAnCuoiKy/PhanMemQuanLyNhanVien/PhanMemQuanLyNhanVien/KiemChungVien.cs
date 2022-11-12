@@ -61,5 +61,6 @@ namespace PhanMemQuanLyNhanVien
         {
             return base.getLuongCoBan() + (tienThuong*soLoi);
         }
+        
     }
 }

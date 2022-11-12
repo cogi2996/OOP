@@ -166,6 +166,87 @@ namespace PhanMemQuanLyNhanVien
             this.luongCoBan = new TienLuong(luongCoBan);
         }
         public abstract TienLuong TinhLuong();
-        
+        public virtual void SuaThonTin(int ketThuc)
+        {
+            int choice = 0;
+            Console.Clear();
+            Console.WriteLine($"-->Lua chon thong tin can sua cua nhan vien co ma {this.maNhanVien}\n[1]-ho va ten\n[2]-" +
+                    $"Dia chi\n[3]-Tuoi\n[4]-Ngay sinh\n[5]-So dien thoai\n[6]-Nam kinh nghiem\n[7]-Ngay bat dau lam\n[8]-Tinh trang lam viec" +
+                    $"\n[9]-Luong co ban");
+            choice = int.Parse(Console.ReadLine());
+            Console.Clear();
+            switch(choice)
+            {
+                case 1:
+                    {
+                        Console.Write("Ho va ten moi: ");
+                        setHoVaTen(Console.ReadLine());
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.Write("Dia chi moi: ");
+                        setDiaChi(Console.ReadLine());
+                        break;
+                    }
+                case 3:
+                    {
+                        Console.Write("Tuoi moi: ");
+                        setTuoi(int.Parse(Console.ReadLine()));
+                        break;
+                    }
+                case 4:
+                    {
+                        int ngay, thang, nam;
+                        Console.Write("-Ngay sinh moi: ");
+                        Console.Write("\nNhap ngay: ");
+                        ngay = int.Parse(Console.ReadLine());
+                        Console.Write("Nhap thang: ");
+                        thang = int.Parse(Console.ReadLine());
+                        Console.Write("Nhap nam: "); 
+                        nam = int.Parse(Console.ReadLine());
+                        setNgaySinh(new DateTime(nam, thang, nam));
+                        break;
+                    }
+                case 5:
+                    {
+                        Console.Write("So dien thoai moi: ");
+                        setDienThoai(int.Parse(Console.ReadLine()));
+                        break;
+                    }
+                case 6:
+                    {
+                        Console.Write("Nam kinh nghiem moi: ");
+                        setKinhNghiem(int.Parse(Console.ReadLine()));
+                        break;
+                    }
+                case 7:
+                    {
+                        int ngay, thang, nam;
+                        Console.Write("Ngay bat dau lam: ");
+                        Console.Write("\nNhap ngay: ");
+                        ngay = int.Parse(Console.ReadLine());
+                        Console.Write("Nhap thang: ");
+                        thang = int.Parse(Console.ReadLine());
+                        Console.Write("Nhap nam: ");
+                        nam = int.Parse(Console.ReadLine());
+                        setNgaySinh(new DateTime(nam, thang, nam));
+                        break;
+                    }
+                case 8:
+                    {
+                        Console.Write("Tinh trang lam viec moi: ");
+                        setTinhTrang(bool.Parse(Console.ReadLine()));
+                        break;
+                    }
+                case 9:
+                    {
+                        Console.Write("Luong co ban: ");
+                        setLuongCoBan(new TienLuong(double.Parse(Console.ReadLine())));
+                        break;
+                    }
+            }
+        }
+
     }
 }
