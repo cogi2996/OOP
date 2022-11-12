@@ -39,6 +39,10 @@ namespace PhanMemQuanLyNhanVien
         {
             return new TienLuong(a.tien * b);
         }
+        public static TienLuong operator *(TienLuong a, double b)
+        {
+            return new TienLuong(a.tien * b);
+        }
 
 
     }

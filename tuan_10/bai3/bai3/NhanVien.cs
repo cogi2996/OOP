@@ -50,24 +50,19 @@ namespace bai3
                 diaChi = value;
             }
         }
-        abstract public void InThongTin();
-        public string toString()
+        public int TinhTuoi()
         {
-            return $"Ho ten: {hoTen}\nNgay sinh: {ngaySinh.Day} - {ngaySinh.Month} - {ngaySinh.Year}\ndia chi: {diaChi.toString()} ";
+            return DateTime.Now.Year - ngaySinh.Year;
         }
-        public virtual void Nhap()
+
+        public virtual string  Print()
         {
-            Console.WriteLine("Nhap ho va ten: ");
-            hoTen = Console.ReadLine();
-            int date, month, year;
-            Console.WriteLine("Nhap ngay - thang - nam sinh");
-            date = int.Parse(Console.ReadLine());
-            month = int.Parse(Console.ReadLine());
-            year = int.Parse(Console.ReadLine());
-            ngaySinh = new DateTime(year, month, date);
-            diaChi = new DiaChi();
-            diaChi.NhapDiaChi();
-            
+                return $"Ho va ten: {hoTen}"+'\n'
+                + $"Ngay Sinh: {ngaySinh.Day}/{ngaySinh.Month}/{ngaySinh.Year}"+'\n'
+            +$"Dia chi:\n{diaChi.toString()}";
         }
+
+        public abstract double TinhLuong();
+     
     }
 }

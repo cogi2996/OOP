@@ -37,23 +37,17 @@ namespace bai3
             this.luongCB = luongCB;
             this.soSP = soSP;
         }
-        public override void InThongTin()
+        public override string Print()
         {
-            Console.WriteLine(base.toString());
-            Console.WriteLine("Luong: {0}", TinhLuong());
+            return base.Print() + "\n"+$"Luong co ban: {string.Format("{0:#,##0.00}", luongCB)}" +'\n'
+           + $"So san pham: {soSP}" +"\n"
+            +$"Luong thang: {string.Format("{0:#,##0.00}", TinhLuong())}";
         }
-        public  double TinhLuong()
+        public  override double TinhLuong()
         {
             double luong = luongCB + soSP * 5000;
             return luong;
         }
-        public override void Nhap()
-        {
-            base.Nhap();
-            Console.WriteLine("Nhap luong co ban: ");
-            luongCB = double.Parse(Console.ReadLine());
-            Console.WriteLine("Nhap so san pham: ");
-            soSP = int.Parse(Console.ReadLine());
-        }
+    
     }
 }

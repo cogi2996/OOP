@@ -23,21 +23,17 @@ namespace bai3
                 soNgayLamViec = value;
             }
         }
-        public override void InThongTin()
+        public override string Print()
         {
-            Console.WriteLine(base.toString());
-            Console.WriteLine("Luong: {0}", TinhLuong());
+            return base.Print()+"\n"+
+            $"Ngay lam viec: {SoNgayLamViec.ToString()}"+'\n'
+            +$"Luong thang: {string.Format("{0:#,##0.00}", TinhLuong())}";
         }
-        public double TinhLuong()
+        public override double TinhLuong()
         {
             double luong = soNgayLamViec*100000;
             return luong;
         }
-        public override void Nhap()
-        {
-            base.Nhap();
-            Console.WriteLine("So ngay lam viec: ");
-            soNgayLamViec= int.Parse(Console.ReadLine());
-        }
+      
     }
 }

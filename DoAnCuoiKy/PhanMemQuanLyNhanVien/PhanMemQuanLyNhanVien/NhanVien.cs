@@ -31,13 +31,13 @@ namespace PhanMemQuanLyNhanVien
             ngayBatDauLam = new DateTime(1990, 1, 1);
             tinhTrangLamViec = false;
         }
-        public NhanVien(string hoVaTen, string diaChi, int tuoi, DateTime ngaySinh, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec)
+        public NhanVien(string hoVaTen, string diaChi, int tuoi, int  ngay, int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec)
         {
             soLuong++;
             this.hoVaTen = hoVaTen;
             this.diaChi = diaChi;
             this.tuoi = tuoi;
-            this.ngaySinh = ngaySinh;
+            this.ngaySinh = new DateTime(nam, thang, ngay);
             this.dienThoai = dienThoai;
             this.maNhanVien = maNhanVien;
             this.kinhNghiem = kinhNghiem;

@@ -64,19 +64,9 @@ namespace bai3
         }
         public string toString()
         {
-            return $"So nha: {soNha},ten quan: {tenQuan}, ten duong: {tenDuong}, ten thanh pho: {thanhPho}";
+            return $"+So nha: {soNha}\n+Ten quan: {tenQuan}\n+Ten duong: {tenDuong}\n+Ten thanh pho: {thanhPho}";
         }
-        public void NhapDiaChi()
-        {
-            Console.WriteLine("Nhap so nha: ");
-            SoNha = Console.ReadLine();
-            Console.WriteLine("Nhap ten duong: ");
-            TenDuong = Console.ReadLine();
-            Console.WriteLine("Nhap ten quan: ");
-            TenQuan = Console.ReadLine();
-            Console.WriteLine("Nhap ten thanh pho: ");
-            ThanhPho = Console.ReadLine();
-        }
+       
 
     }
 }

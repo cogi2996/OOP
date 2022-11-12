@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj": {}
+    "D:\\OOP\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj": {}
   },
   "projects": {
-    "D:\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj": {
+    "D:\\OOP\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj",
+        "projectUniqueName": "D:\\OOP\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj",
         "projectName": "Bai_Tap_01",
-        "projectPath": "D:\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj",
+        "projectPath": "D:\\OOP\\OOP\\BaiTap_01\\Bai_Tap_01\\Bai_Tap_01.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\OOP\\BaiTap_01\\Bai_Tap_01\\obj\\",
+        "outputPath": "D:\\OOP\\OOP\\BaiTap_01\\Bai_Tap_01\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

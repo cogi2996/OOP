@@ -14,11 +14,11 @@ namespace PhanMemQuanLyNhanVien
             soLuongLapTrinhVien++;
             soGioLamThem = 0;
         }
-        public LapTrinhVien(int soGioLamThem, TienLuong luongNgoaiGio, string hoVaTen, string diaChi, int tuoi, DateTime ngaySinh, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec):base (hoVaTen, diaChi,tuoi,ngaySinh,dienThoai,maNhanVien,kinhNghiem,luongCoBan,ngayBatDauLam,tinhTrangLamViec)
+        public LapTrinhVien(int soGioLamThem, double luongNgoaiGio, string hoVaTen, string diaChi, int tuoi, int ngay,int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec):base (hoVaTen, diaChi,tuoi,ngay, thang, nam,dienThoai,maNhanVien,kinhNghiem,luongCoBan,ngayBatDauLam,tinhTrangLamViec)
         {
             soLuongLapTrinhVien++;
             this.soGioLamThem = soGioLamThem; 
-            this.luongNgoaiGio = luongNgoaiGio;
+            this.luongNgoaiGio = new TienLuong(luongNgoaiGio);
         }
         public int getSoLuongLapTrinhVien()
         {
@@ -42,7 +42,7 @@ namespace PhanMemQuanLyNhanVien
         }
         public override string toString()
         {
-            string kq = $"So luong lap trinh vien: {soLuongLapTrinhVien}\nSo gio lam them: {soGioLamThem}\nLuong ngoai gio:{luongNgoaiGio.toString()}";
+            string kq =base.toString() +  $"\nSo luong lap trinh vien: {soLuongLapTrinhVien}\nSo gio lam them: {soGioLamThem}\nLuong ngoai gio:{luongNgoaiGio.toString()}";
             return kq;
         }
         public override void NhapThongtin()
