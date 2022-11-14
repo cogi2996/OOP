@@ -14,7 +14,7 @@ namespace PhanMemQuanLyNhanVien
             soLuongLapTrinhVien++;
             soGioLamThem = 0;
         }
-        public LapTrinhVien(int soGioLamThem, double luongNgoaiGio, string hoVaTen, string diaChi, int tuoi, int ngay,int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec):base (hoVaTen, diaChi,tuoi,ngay, thang, nam,dienThoai,maNhanVien,kinhNghiem,luongCoBan,ngayBatDauLam,tinhTrangLamViec)
+        public LapTrinhVien(int soGioLamThem, double luongNgoaiGio, string hoVaTen, string diaChi, int tuoi, int ngay,int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec,int loaiNhanVien):base (hoVaTen, diaChi,tuoi,ngay, thang, nam,dienThoai,maNhanVien,kinhNghiem,luongCoBan,ngayBatDauLam,tinhTrangLamViec,loaiNhanVien)
         {
             soLuongLapTrinhVien++;
             this.soGioLamThem = soGioLamThem; 
@@ -59,6 +59,21 @@ namespace PhanMemQuanLyNhanVien
             TienLuong luong = new TienLuong();
             luong = base.getLuongCoBan() + luongNgoaiGio*soGioLamThem;
             return luong;
+        }
+        public override void SuaThongTin(ref int choice,string thongTinLapTrinh)
+        {
+                Console.Clear();
+                base.SuaThongTin(ref choice, thongTinLapTrinh);
+                if(choice == 11)
+                {
+                    Console.Write("So gio lam them moi: ");
+                    setSoGioLamThem(int.Parse(Console.ReadLine()));
+                }
+                else if (choice == 12)
+                {
+                    Console.WriteLine("Luong ngoai gio moi: ");
+                    setLuongNgoaiGio(new TienLuong(double.Parse(Console.ReadLine())));
+                }
         }
     }
 }

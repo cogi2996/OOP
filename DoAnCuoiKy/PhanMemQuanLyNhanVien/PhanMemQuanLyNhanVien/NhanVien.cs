@@ -16,7 +16,8 @@ namespace PhanMemQuanLyNhanVien
         private int kinhNghiem;
         private TienLuong luongCoBan = new TienLuong();
         private DateTime ngayBatDauLam;
-        private bool tinhTrangLamViec; 
+        private bool tinhTrangLamViec;
+        private int loaiNhanVien; // 0 - lap trinh vien , 1 - kiem chung vien
         public NhanVien()
         {
             soLuong++;
@@ -30,8 +31,9 @@ namespace PhanMemQuanLyNhanVien
             luongCoBan = new TienLuong();
             ngayBatDauLam = new DateTime(1990, 1, 1);
             tinhTrangLamViec = false;
+            loaiNhanVien = 0;
         }
-        public NhanVien(string hoVaTen, string diaChi, int tuoi, int  ngay, int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec)
+        public NhanVien(string hoVaTen, string diaChi, int tuoi, int  ngay, int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec,int loaiNhanVien)
         {
             soLuong++;
             this.hoVaTen = hoVaTen;
@@ -44,6 +46,7 @@ namespace PhanMemQuanLyNhanVien
             this.luongCoBan.setTienLuong(luongCoBan);
             this.ngayBatDauLam = ngayBatDauLam;
             this.tinhTrangLamViec = tinhTrangLamViec;
+            this.loaiNhanVien = loaiNhanVien;
         }
         public void setHoVaTen(string hoVaTen)
         {
@@ -121,11 +124,19 @@ namespace PhanMemQuanLyNhanVien
         {
             this.tinhTrangLamViec = tinhTrangLamViec; 
         }
+        public void setLoaiNhanVien(int loaiNhanVien)
+        {
+            this.loaiNhanVien = loaiNhanVien;
+        }
+        public int getLoaiNhanVien()
+        {
+            return loaiNhanVien;
+        }    
         public virtual string toString ()
         {
             string kq = $"Ten:{hoVaTen}\nDia chi:{diaChi}\nTuoi:{tuoi}\nNgay sinh:{ngaySinh.Day}/{ngaySinh.Month}/{ngaySinh.Year}\n" +
                 $"So dien thoai:{dienThoai}\nKinh nghiem:{kinhNghiem}\nNgay bat dau lam:{ngayBatDauLam.Day}/{ngayBatDauLam.Month}" +
-                $"/{ngayBatDauLam.Year}\nTinh trang lam viec:{((tinhTrangLamViec == true) ? " Con lam" : " Da nghi")}\nLuong co ban:{luongCoBan.toString()}";
+                $"/{ngayBatDauLam.Year}\nTinh trang lam viec:{((tinhTrangLamViec == true) ? "Con lam" : " Da nghi")}\nLuong co ban:{luongCoBan.toString()}";
             return kq;            
         }
         public static void InThongTinNhanVien (NhanVien[] nhanViens)
@@ -166,15 +177,13 @@ namespace PhanMemQuanLyNhanVien
             this.luongCoBan = new TienLuong(luongCoBan);
         }
         public abstract TienLuong TinhLuong();
-        public virtual void SuaThonTin(int ketThuc)
+        public virtual void SuaThongTin(ref int choice,string thongTinlapTrinh)
         {
-            int choice = 0;
             Console.Clear();
             Console.WriteLine($"-->Lua chon thong tin can sua cua nhan vien co ma {this.maNhanVien}\n[1]-ho va ten\n[2]-" +
-                    $"Dia chi\n[3]-Tuoi\n[4]-Ngay sinh\n[5]-So dien thoai\n[6]-Nam kinh nghiem\n[7]-Ngay bat dau lam\n[8]-Tinh trang lam viec" +
-                    $"\n[9]-Luong co ban");
+                    $"Dia chi\n[3]-Tuoi\n[4]-Ngay sinh\n[5]-So dien thoai\n[6]-Ma nhan vien\n[7]-Nam kinh nghiem\n[8]-Ngay bat dau lam\n[9]-Luong co ban" +
+                    $"\n[10]-Tinh trang lam viec\n"+ thongTinlapTrinh);
             choice = int.Parse(Console.ReadLine());
-            Console.Clear();
             switch(choice)
             {
                 case 1:
@@ -205,7 +214,7 @@ namespace PhanMemQuanLyNhanVien
                         thang = int.Parse(Console.ReadLine());
                         Console.Write("Nhap nam: "); 
                         nam = int.Parse(Console.ReadLine());
-                        setNgaySinh(new DateTime(nam, thang, nam));
+                        setNgaySinh(new DateTime(nam, thang, ngay));
                         break;
                     }
                 case 5:
@@ -216,11 +225,18 @@ namespace PhanMemQuanLyNhanVien
                     }
                 case 6:
                     {
-                        Console.Write("Nam kinh nghiem moi: ");
-                        setKinhNghiem(int.Parse(Console.ReadLine()));
+                        Console.Clear();
+                        Console.Write("Nhap ma nhan vien: ");
+                        setMaNhanVien(Console.ReadLine());
                         break;
                     }
                 case 7:
+                    {
+                         Console.Write("Nam kinh nghiem moi: ");
+                        setKinhNghiem(int.Parse(Console.ReadLine()));
+                        break;
+                    }
+                case 8:
                     {
                         int ngay, thang, nam;
                         Console.Write("Ngay bat dau lam: ");
@@ -230,13 +246,7 @@ namespace PhanMemQuanLyNhanVien
                         thang = int.Parse(Console.ReadLine());
                         Console.Write("Nhap nam: ");
                         nam = int.Parse(Console.ReadLine());
-                        setNgaySinh(new DateTime(nam, thang, nam));
-                        break;
-                    }
-                case 8:
-                    {
-                        Console.Write("Tinh trang lam viec moi: ");
-                        setTinhTrang(bool.Parse(Console.ReadLine()));
+                        setNgaySinh(new DateTime(nam, thang, ngay));
                         break;
                     }
                 case 9:
@@ -244,6 +254,13 @@ namespace PhanMemQuanLyNhanVien
                         Console.Write("Luong co ban: ");
                         setLuongCoBan(new TienLuong(double.Parse(Console.ReadLine())));
                         break;
+                    }
+                case 10:
+                    {
+                        Console.Write("Tinh trang lam viec moi: ");
+                        setTinhTrang(bool.Parse(Console.ReadLine()));
+                        break;
+
                     }
             }
         }
