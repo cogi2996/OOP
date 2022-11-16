@@ -7,12 +7,57 @@ namespace PhanMemQuanLyNhanVien
     {
         public static void Main(string[] args)
         {
+            static void InBangLuong(List<NhanVien>list)
+            {
+                static void inVien()
+                {
+                    for (int i = 0; i < 39*3; i++)
+                    {
+                        if (i == 0)
+                        {
+                            Console.Write("+");
+                            continue;
+                        }
+                        else if (i == 36 )
+                        {
+                            Console.Write("+");
+                            continue;
+                        }
+                        else if(i == 35*2+2)
+                        {
+                            Console.Write("+");
+                            continue;
+                        }
+                        else if(i == 35*3+1)
+                        {
+                            Console.Write("+\n");
+                            break ;
+                        }
+                        Console.Write("-");
+                    }
+                }
+                static string convert(string s, int length)
+                {
+                    return s.PadLeft((length - s.Length) / 2 + s.Length).PadRight(length);
+                }
+                int lenght = 35;
+                inVien();
+                Console.Write("|" + convert("Ma nhan vien", lenght) + "|" + convert("Ho va ten", lenght) + "|" + convert("Tien luong", lenght - 2) + "|" + "\n");
+
+                foreach (NhanVien nhanVien in list)
+                {
+                    inVien();
+                    Console.Write("|" + convert(nhanVien.getMaNhanVien(), lenght) + "|" + convert(nhanVien.getHoVaTen(), lenght) + "|"+convert(nhanVien.TinhLuong().toString(),lenght-2)+"|"+"\n");
+                }
+                inVien();
+
+            }
             List<NhanVien> list = new List<NhanVien>();
             Admin admin = new Admin();
-            NhanVien x = new LapTrinhVien(6, 500000, "Trang", "Da Nang", 19, 20, 11, 2003, 0195304155, "KCV2555", 1, 4000000, new DateTime(2020, 9, 11), true,0);
-            NhanVien y = new LapTrinhVien(6, 500000, "An", "Da Nang", 19, 20, 11, 2003, 0195304155, "KCV26655a", 1, 4000000, new DateTime(2020, 9, 11), true,0);
-            NhanVien z = new LapTrinhVien(6, 500000, "Minh", "Quan Nam", 19, 20, 11, 2003, 0195304155, "KCV26655", 1, 4000000, new DateTime(2020, 9, 25), true,1);
-            NhanVien t = new LapTrinhVien(6, 500000, "Minh", "Da Nang", 19, 20, 11, 2003, 0195304155, "KCV251455", 1, 4000000, new DateTime(2020, 9, 11), true,0);
+            NhanVien x = new LapTrinhVien(6, 5544, "Trang", "Da Nang", 19, 20, 11, 2003, 0195304155, "KCV2555", 1, 4546, new DateTime(2020, 9, 11), true,0);
+            NhanVien y = new LapTrinhVien(6, 4548, "An", "Da Nang", 19, 20, 11, 2003, 0195304155, "KCV26655a", 1, 35230, new DateTime(2020, 9, 11), true,0);
+            NhanVien z = new KiemChungVien(6,654, "Minh lai van tran", "Quan Nam", 19, 20, 11, 2003, 0195304155, "KCV26655", 1, 45, new DateTime(2020, 9, 25), true,1);
+            NhanVien t = new LapTrinhVien(6, 88, "Minh", "Da Nang", 19, 20, 11, 2003, 0195304155, "KCV251455", 1, 6548, new DateTime(2020, 9, 11), true,0);
             list.Add(x);
             list.Add(y);
             list.Add(z);
@@ -85,6 +130,11 @@ namespace PhanMemQuanLyNhanVien
                         case 2:
                             {
                                 QuanLy(choice,admin, list);
+                                break;
+                            }
+                        case 3:
+                            {
+                                ThongKe(list);
                                 break;
                             }
                     }
@@ -195,10 +245,10 @@ namespace PhanMemQuanLyNhanVien
                     else if (choice ==2)
                     {
 
-                        NhanVien  KiemChungVien = new KiemChungVien();
+                        NhanVien  kiemChungVien = new KiemChungVien();
                         Console.Clear();
-                        KiemChungVien.NhapThongtin();
-                        list.Add(KiemChungVien);
+                        kiemChungVien.NhapThongtin();
+                        list.Add(kiemChungVien);
                         NhapThongTinNhanVien(list);
                         choice = 3;// thang cuoi cung out thi thang con cung out
                     }
@@ -210,6 +260,7 @@ namespace PhanMemQuanLyNhanVien
             static void SuaThongTinNhanVien(List<NhanVien> list)
             {
                 int choice = 0;
+                int ketThuc = 2;
                 do
                 {
                     Console.Clear();
@@ -230,15 +281,20 @@ namespace PhanMemQuanLyNhanVien
                     {
                         NhanVien nhanVien = list[index] as NhanVien;
                         Console.WriteLine(nhanVien.getLoaiNhanVien());
-                        int subCode = nhanVien.getLoaiNhanVien(); 
+                        int subCode = nhanVien.getLoaiNhanVien();
                         switch(subCode)
                         {
                             case 0:
                                 {
                                     do
                                     {
-                                        string thongTinLapTrinh = "[11]-So go lam them\n[12]-Luong ngoai gio";
+                                        string thongTinLapTrinh = "[11]-So go lam them\n[12]-Luong ngoai gio\n[13]-Quay lai";
                                         nhanVien.SuaThongTin(ref choice, thongTinLapTrinh);
+                                        if (choice == 13)
+                                        {
+                                            choice = 2;
+                                            break;
+                                        }
                                         Console.Write("\n[1]-Tiep tuc chinh sua\n[2]-Quay lai\n");
                                         choice = int.Parse(Console.ReadLine());
                                         if(choice == 1)
@@ -255,14 +311,35 @@ namespace PhanMemQuanLyNhanVien
                                 }
                             case 1:
                                 {
+                                    do
+                                    {
+                                        string thongTinLapTrinh = "[11]-So loi\n[12]-Tien thuong\n[13]-Quay lai";
+                                        nhanVien.SuaThongTin(ref choice, thongTinLapTrinh);
+                                        if (choice == 13)
+                                        {
+                                            choice = 2;
+                                            break;
+                                        }
 
+                                        Console.Write("\n[1]-Tiep tuc chinh sua\n[2]-Quay lai\n");
+                                        choice = int.Parse(Console.ReadLine());
+                                        if (choice == 1)
+                                        {
+                                            goto case 1;
+                                        }
+                                        else if (choice == 2)
+                                        {
+                                            break;
+                                        }
+                                        break;
+                                    } while (choice != 13);
                                     break;
                                 }
                         }
                       
                     }
 
-                } while (choice != 2);
+                } while (choice != ketThuc);
             }
             static void TimKhiemThongTin(List<NhanVien>list)
             {
@@ -338,7 +415,7 @@ namespace PhanMemQuanLyNhanVien
                 static void MaSoNhanVien(List<NhanVien> list)
                 {
                     Console.Clear();
-                    Console.Write("Nhap ten nhan vien can tim kiem: ");
+                    Console.Write("Nhap ma so nhan vien can tim kiem: ");
                     string maSo = Console.ReadLine();
                     int index = 1;
                     List<NhanVien> listTemp = new List<NhanVien>();
@@ -491,12 +568,12 @@ namespace PhanMemQuanLyNhanVien
                         case 1:
                             {
                                 Console.Clear();
-                                Console.Write("\nNhap ma so nhan vien can xoa: ");
+                                Console.Write("Nhap ma so nhan vien can xoa: ");
                                 string maSo = Console.ReadLine().Trim();
                                 int oldCount = list.Count; // luu giu so luong nhan vien cu truoc khi co xoa
                                 int index = 0;
                                 foreach(NhanVien nhanVien in list)
-                                {
+                                {   
                                     if(nhanVien.getMaNhanVien()==maSo)
                                     {
                                         list.RemoveAt(index);
@@ -562,10 +639,67 @@ namespace PhanMemQuanLyNhanVien
                                 XoaNhanVien(list);
                                 break;
                             }
-                            
                     }
                     
                 } while (choice != 5);
+            }
+            static void ThongKe(List<NhanVien> list)
+            {
+                int choice = 0;
+                switch(choice)
+                {
+                    case 0:
+                        {
+                            Console.Clear();
+                            Console.WriteLine("[1]-In bang luong nhan vien\n[2]-Thong ke so luong nhan vien\n[3]-Quay lai");
+                            choice = int.Parse(Console.ReadLine());
+                            if (choice == 1)
+                                goto case 1;
+                            else if (choice == 2)
+                                goto case 2;
+                            break;
+                        }
+                    case 1:
+                        {
+                            Console.Clear();
+                            InBangLuong(list);
+                            Console.WriteLine("[1]-Sap xe theo luong\n[2]-Quay lai");
+                            choice = int.Parse(Console.ReadLine());
+                            
+                            if(choice == 1)
+                            {
+                                List<NhanVien> listTemp = new List<NhanVien>(list);
+                                listTemp.Sort((x, y) =>
+                                {
+                                    int ret = TienLuong.soSanhTien(x.TinhLuong(), y.TinhLuong());
+                                    return ret;
+                                });
+                                Console.Clear();
+                                InBangLuong(listTemp);
+                                Console.Write("\nNhap bat ky de quay lai");
+                                Console.ReadKey();
+                                goto case 0;
+                            }
+                            else if (choice == 2)
+                            {
+                                break;
+                            }
+                            break;
+                        }
+                    case 2:
+                        {
+                            Console.Clear();
+                            Console.Write("-So luong toan bo nhan vien: ");
+                            Console.Write(NhanVien.getSoLuong());
+                            Console.Write("\n-So luong toan lap trinh vien: ");
+                            Console.Write(LapTrinhVien.getSoLuongLapTrinhVien());
+                            Console.Write("\n-So luong toan kiem chung vien: ");
+                            Console.Write(KiemChungVien.getSoLuongKiemChungVien());
+                            Console.Write("\nNhap bat ky de quay lai");
+                            Console.ReadKey();
+                            goto case 0;
+                        }
+                }
             }
             XacThuc(admin,list);
         }

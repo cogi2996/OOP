@@ -20,7 +20,7 @@ namespace PhanMemQuanLyNhanVien
             this.soGioLamThem = soGioLamThem; 
             this.luongNgoaiGio = new TienLuong(luongNgoaiGio);
         }
-        public int getSoLuongLapTrinhVien()
+        public static int getSoLuongLapTrinhVien()
         {
             return soLuongLapTrinhVien;
         }

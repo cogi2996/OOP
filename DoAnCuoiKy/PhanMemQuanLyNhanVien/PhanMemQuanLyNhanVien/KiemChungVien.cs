@@ -8,7 +8,7 @@ namespace PhanMemQuanLyNhanVien
     {
         private static int soLuongKiemChungVien;
         private int soLoi;
-        private TienLuong tienThuong;
+        private TienLuong tienThuong = new TienLuong();
         public KiemChungVien()
         {
 
@@ -36,7 +36,7 @@ namespace PhanMemQuanLyNhanVien
             return tienThuong;
         }
 
-        public int InSoLuongKiemChungVien()
+        public static int getSoLuongKiemChungVien()
         {
             return soLuongKiemChungVien;
         }
@@ -44,7 +44,7 @@ namespace PhanMemQuanLyNhanVien
         {
             return base.toString()+$"\nSo loi: {soLoi}\nTien thuong: {tienThuong.toString()}\nTien luong: {TinhLuong().toString()}";
         }
-        public void NhapThongTin()
+        public override void NhapThongtin()
         {
             base.NhapThongtin();
             Console.WriteLine("So loi:");
@@ -61,6 +61,20 @@ namespace PhanMemQuanLyNhanVien
         {
             return base.getLuongCoBan() + (tienThuong*soLoi);
         }
-        
+        public override void SuaThongTin(ref int choice, string thongTinLapTrinh)
+        {
+            Console.Clear();
+            base.SuaThongTin(ref choice, thongTinLapTrinh);
+            if (choice == 11)
+            {
+                Console.Write("So loi moi: ");
+                setSoLoi(int.Parse(Console.ReadLine()));
+            }
+            else if (choice == 12)
+            {
+                Console.WriteLine("Tien thuong moi: ");
+                setTienThuong(double.Parse(Console.ReadLine()));
+            }
+        }
     }
 }

@@ -23,6 +23,10 @@ namespace PhanMemQuanLyNhanVien
         {
             return tien;
         }
+        public double getTienLuongDouble()
+        {
+            return tien;
+        }
         public string toString()
         {
             return string.Format("{0:#,##0.00}", tien);
@@ -43,7 +47,15 @@ namespace PhanMemQuanLyNhanVien
         {
             return new TienLuong(a.tien * b);
         }
-
+        public static int soSanhTien(TienLuong a, TienLuong b)
+        {
+            if (a.tien == b.tien)
+                return 0;
+            else if (a.tien > b.tien)
+                return 1;
+            else
+                return -1;
+        }
 
     }
 }

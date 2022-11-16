@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Collections;
 namespace PhanMemQuanLyNhanVien
 {
     public abstract class NhanVien
@@ -47,6 +47,10 @@ namespace PhanMemQuanLyNhanVien
             this.ngayBatDauLam = ngayBatDauLam;
             this.tinhTrangLamViec = tinhTrangLamViec;
             this.loaiNhanVien = loaiNhanVien;
+        }
+        public static int getSoLuong()
+        {
+            return soLuong;
         }
         public void setHoVaTen(string hoVaTen)
         {
@@ -149,6 +153,8 @@ namespace PhanMemQuanLyNhanVien
         
         public virtual void NhapThongtin()
         {
+            Console.Write("Ma nhan vien: ");
+            maNhanVien = Console.ReadLine();
             Console.Write("Ho va ten: ");
             hoVaTen = Console.ReadLine();
             Console.Write("\nDia chi: ");
@@ -184,10 +190,12 @@ namespace PhanMemQuanLyNhanVien
                     $"Dia chi\n[3]-Tuoi\n[4]-Ngay sinh\n[5]-So dien thoai\n[6]-Ma nhan vien\n[7]-Nam kinh nghiem\n[8]-Ngay bat dau lam\n[9]-Luong co ban" +
                     $"\n[10]-Tinh trang lam viec\n"+ thongTinlapTrinh);
             choice = int.Parse(Console.ReadLine());
+            Console.Clear();
             switch(choice)
             {
                 case 1:
                     {
+                        
                         Console.Write("Ho va ten moi: ");
                         setHoVaTen(Console.ReadLine());
                         break;
@@ -262,6 +270,45 @@ namespace PhanMemQuanLyNhanVien
                         break;
 
                     }
+            }
+
+        }
+        public class SortPersons : IComparer
+        {
+            public int Compare(object x, object y)
+            {
+                // Ép kiểu 2 object truyền vào về Person.
+                NhanVien p1 = x as NhanVien;
+                NhanVien p2 = y as NhanVien;
+                    
+                /*
+                 * Vì có thể 2 object truyền vào không phải Person khi đó ta không thể so sánh được.
+                 * Trường hợp này tốt nhất ta nên ném ra lỗi để lập trình viên sửa chữa.
+                 * Chi tiết về exception sẽ được trình bày ở những bài học sau.
+                 */
+                if (p1 == null || p2 == null)
+                {
+                    throw new InvalidOperationException();
+                }
+                else
+                {
+                    /*
+                     * Khi dữ liệu đã ok thì ta thực hiện so sánh và trả về các giá trị 1 0 -1 tương ứng
+                     * lớn hơn, bằng, bé hơn.
+                     */
+                    if (TienLuong.soSanhTien(p1.TinhLuong(),p2.TinhLuong())==1)
+                    {
+                        return 1;
+                    }
+                    else if (TienLuong.soSanhTien(p1.TinhLuong(), p2.TinhLuong()) == 0)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
             }
         }
 
