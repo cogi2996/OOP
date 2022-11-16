@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.IO;
+using System.Text;
 namespace PhanMemQuanLyNhanVien
 {
     public class Program
@@ -43,7 +44,6 @@ namespace PhanMemQuanLyNhanVien
                 int lenght = 35;
                 inVien();
                 Console.Write("|" + convert("Ma nhan vien", lenght) + "|" + convert("Ho va ten", lenght) + "|" + convert("Tien luong", lenght - 2) + "|" + "\n");
-
                 foreach (NhanVien nhanVien in list)
                 {
                     inVien();
@@ -76,14 +76,62 @@ namespace PhanMemQuanLyNhanVien
             }
             static void XacThuc(Admin admin,List<NhanVien>list)
             {
-                
                 Console.WriteLine("[1]-Dang Nhap");
                 Console.WriteLine("[2]-Dang ki");
                 int choice = int.Parse(Console.ReadLine());
                 if(choice == 1)
                 {
                     Console.Clear();
-                    Menu(admin, list);
+                    choice = 0;
+                    switch(choice)
+                    {
+                        case 0:
+                            {
+                                Console.Clear();
+                                Console.WriteLine("[1]-Email: \n[2]-Mat khau: ");
+                                choice = int.Parse(Console.ReadLine());
+                                if(choice == 1)
+                                {
+                                    goto case 2;
+                                }
+                                break;
+                            }
+                        case 2: // nhap email
+                            {
+                                string[] thongTinTaiKhoan = File.ReadAllLines("D:\\OOP\\OOP\\DoAnCuoiKy\\PhanMemQuanLyNhanVien\\PhanMemQuanLyNhanVien\\data.txt");
+                                string emailAdmin = thongTinTaiKhoan[1];
+                                string matKhauAdmin = thongTinTaiKhoan[3];
+                                Console.Clear();
+                                Console.Write("Email: ");
+                                string emailDangNhap = Console.ReadLine();
+                                if(emailDangNhap == emailAdmin)
+                                {
+
+                                    Console.Write("Mat khau: ");
+                                    string matKhauDangNhap = Console.ReadLine();
+                                    if(matKhauDangNhap == matKhauAdmin)
+                                    {
+                                        DocFile(admin, list);
+                                        Menu(admin,list);
+                                    }
+                                    else
+                                    {
+                                        Console.Write("\n[ERROR]-Mat khau ban da nhap khong khop voi tai khoan");
+                                        baCham();
+                                        goto case 0;                                        
+                                    }
+                                }
+                                else
+                                {
+                                    Console.Write("\n[ERROR]-Email ban da nhap khong khop voi bat ky tai khoan");
+                                    baCham();
+                                    goto case 2;
+                                }
+                                break;
+                            }
+                        
+
+                    }
                 }
                 else if(choice == 2)
                 {
@@ -105,10 +153,15 @@ namespace PhanMemQuanLyNhanVien
                     xacNhanMatKhau = Console.ReadLine();
                     if(matKhau == xacNhanMatKhau)
                     {
-                        Console.Write("   ->Chinh xac");
+                        Console.Write("-->Dang tien hanh tao tai khoan moi");
+                        baCham();
                         admin = new Admin(hoTen, email, dienThoai, matKhau);
+                        // ghi mat khau vao file
+                        string[] thongTinTaiKhoan = { hoTen,email,dienThoai.ToString(),matKhau,xacNhanMatKhau};
+                        File.WriteAllLines("D:\\OOP\\OOP\\DoAnCuoiKy\\PhanMemQuanLyNhanVien\\PhanMemQuanLyNhanVien\\data.txt", thongTinTaiKhoan);
                         Menu(admin,list);
                     }
+
                 }
             }
             static void Menu(Admin admin,List<NhanVien> list)
@@ -135,6 +188,13 @@ namespace PhanMemQuanLyNhanVien
                         case 3:
                             {
                                 ThongKe(list);
+                                break;
+                            }
+                        case 4:
+                            {
+                                GhiFile(admin,list);
+                                Console.WriteLine("-->Luu thong tin thanh cong");
+                                baCham();
                                 break;
                             }
                     }
@@ -701,6 +761,105 @@ namespace PhanMemQuanLyNhanVien
                         }
                 }
             }
+            static void GhiFile(Admin admin,List<NhanVien>list)
+            {
+                //ghi thong tin nhan vine
+                string[] thongTinTaiKhoan = { admin.getHoTen(), admin.getEmail(), admin.getDienThoai().ToString(), admin.getMatKhau(), admin.getMatKhau() };
+                static void GhiThongTin(Admin admin, NhanVien nhanVien, List<NhanVien> list, string[] a, ref int i)
+                {
+                    a[i++] = nhanVien.getLoaiNhanVien().ToString();
+                    a[i++]= nhanVien.getMaNhanVien();
+                    a[i++] = nhanVien.getHoVaTen();
+                    a[i++] = nhanVien.getDiaChi();
+                    a[i++] = nhanVien.getTuoi().ToString();
+                    a[i++] = nhanVien.getNgaySinh().Day.ToString();
+                    a[i++] = nhanVien.getNgaySinh().Month.ToString();
+                    a[i++] = nhanVien.getNgaySinh().Year.ToString();
+                    a[i++] = nhanVien.getDienThoai().ToString();
+                    a[i++] = nhanVien.getKinhNghiem().ToString();
+                    a[i++] = nhanVien.getNgayBatDauLam().Day.ToString();
+                    a[i++] = nhanVien.getNgayBatDauLam().Month.ToString();
+                    a[i++] = nhanVien.getNgayBatDauLam().Year.ToString();
+                    a[i++] = nhanVien.getNgayBatDauLam().ToString();
+                    a[i++] = nhanVien.getLuongCoBan().Tien.ToString();
+                }
+                for (int i = 5; i < thongTinTaiKhoan.Length; ++i)
+                {
+
+                    if (thongTinTaiKhoan[i] == "0")
+                    {
+                        LapTrinhVien nhanVien = new LapTrinhVien();
+                        GhiThongTin(admin, nhanVien, list, thongTinTaiKhoan, ref i);
+                        thongTinTaiKhoan[i++] = nhanVien.getSoGioLamThem().ToString();
+                        thongTinTaiKhoan[i] = nhanVien.getLuongNgoaiGio().ToString();
+                        continue;
+                    }
+                    else if (thongTinTaiKhoan[i] == "1")
+                    {
+                        KiemChungVien nhanVien = new KiemChungVien();
+                        GhiThongTin(admin, nhanVien, list, thongTinTaiKhoan, ref i);
+                        thongTinTaiKhoan[i++] = nhanVien.getSoLoi().ToString();
+                        thongTinTaiKhoan[i] =nhanVien.getTienThuong().ToString();
+                    }
+                }
+                File.WriteAllLines("D:\\OOP\\OOP\\DoAnCuoiKy\\PhanMemQuanLyNhanVien\\PhanMemQuanLyNhanVien\\data.txt", thongTinTaiKhoan);
+               
+            }
+            static void DocFile(Admin admin,List<NhanVien> list)
+            {
+                static void DocThongTin(Admin admin,NhanVien nhanVien,List<NhanVien>list,string[] a,ref int i)
+                {
+                    // tang i len de tru cac dong thong tin admin
+                    nhanVien.setLoaiNhanVien(int.Parse(a[i++]));
+                    nhanVien.setMaNhanVien(a[i++]);
+                    nhanVien.setHoVaTen(a[i++]);
+                    nhanVien.setDiaChi(a[i++]);
+                    nhanVien.setTuoi(int.Parse(a[i++]));
+                    int ngay, thang, nam;
+                    ngay = int.Parse(a[i++]);
+                    thang = int.Parse(a[i++]);
+                    nam = int.Parse(a[i++]);
+                    nhanVien.setNgaySinh(new DateTime(nam, thang, ngay));
+                    nhanVien.setDienThoai(int.Parse(a[i++]));
+                    nhanVien.setKinhNghiem(int.Parse(a[i++]));
+                    ngay = int.Parse(a[i++]);
+                    thang = int.Parse(a[i++]);
+                    nam = int.Parse(a[i++]);
+                    nhanVien.setNgayBatDauLam(new DateTime(nam, thang, ngay));
+                    nhanVien.setTinhTrang(bool.Parse(a[i++]));
+                    nhanVien.setLuongCoBan(new TienLuong(double.Parse(a[i++])));
+                   
+                }
+                string[] a = File.ReadAllLines("D:\\OOP\\OOP\\DoAnCuoiKy\\PhanMemQuanLyNhanVien\\PhanMemQuanLyNhanVien\\data.txt");
+                admin.setHoTen(a[0]);
+                admin.setEmail(a[1]);
+                admin.setDienThoai(int.Parse(a[2]));
+                admin.setMatKhau(a[3]);
+                admin.setMatKhau(a[4]);
+                for (int i = 5; i < a.Length; ++i)
+                {
+                    
+                    if(a[i]=="0")
+                    {
+                        LapTrinhVien nhanVien = new LapTrinhVien();
+                        DocThongTin(admin,nhanVien,list,a, ref i);
+                        nhanVien.setSoGioLamThem(int.Parse(a[i++]));
+                        nhanVien.setLuongNgoaiGio(new TienLuong(double.Parse(a[i])));
+                        list.Add(nhanVien as NhanVien);
+                        continue;
+                    }
+                    else if(a[i]=="1")
+                    {
+                        KiemChungVien nhanVien = new KiemChungVien();
+                        DocThongTin(admin,nhanVien, list, a, ref i);
+                        nhanVien.setSoLoi(int.Parse(a[i++]));
+                        nhanVien.setTienThuong(double.Parse(a[i]));
+                        list.Add(nhanVien as NhanVien);
+                    }
+                }
+                
+            }
+            
             XacThuc(admin,list);
         }
     }
