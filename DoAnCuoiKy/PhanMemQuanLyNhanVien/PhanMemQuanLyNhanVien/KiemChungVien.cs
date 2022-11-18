@@ -11,10 +11,14 @@ namespace PhanMemQuanLyNhanVien
         private TienLuong tienThuong = new TienLuong();
         public KiemChungVien()
         {
-
+            soLuongKiemChungVien++;
+            this.setLoaiNhanVien(0);
+            setLoaiNhanVien(1);
+            soLoi = 0;
         }
         public  KiemChungVien(int soLoi,double tienThuong, string hoVaTen, string diaChi, int tuoi, int ngay, int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec,int loaiNhanVien) : base(hoVaTen, diaChi, tuoi, ngay, thang, nam, dienThoai, maNhanVien, kinhNghiem, luongCoBan, ngayBatDauLam, tinhTrangLamViec,loaiNhanVien)
         {
+            this.setLoaiNhanVien(1);
             soLuongKiemChungVien++;
             this.soLoi = soLoi;
             this.tienThuong = new TienLuong(tienThuong);

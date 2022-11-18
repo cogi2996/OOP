@@ -11,6 +11,10 @@ namespace PhanMemQuanLyNhanVien
         {
             tien = 0.0;
         }
+        public TienLuong(double tien)
+        {
+            this.tien = tien;
+        }
         public double Tien
         {
             get
@@ -22,10 +26,7 @@ namespace PhanMemQuanLyNhanVien
                 tien = value;
             }
         }
-        public TienLuong(double tien)
-        {
-            this.tien = tien;
-        }
+        
 
         public void setTienLuong(double tien)
         {

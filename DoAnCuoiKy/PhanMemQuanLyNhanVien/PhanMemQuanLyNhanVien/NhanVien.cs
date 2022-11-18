@@ -128,6 +128,10 @@ namespace PhanMemQuanLyNhanVien
         {
             this.tinhTrangLamViec = tinhTrangLamViec; 
         }
+        public bool getTinhTrang()
+        {
+            return tinhTrangLamViec;
+        }
         public void setLoaiNhanVien(int loaiNhanVien)
         {
             this.loaiNhanVien = loaiNhanVien;
