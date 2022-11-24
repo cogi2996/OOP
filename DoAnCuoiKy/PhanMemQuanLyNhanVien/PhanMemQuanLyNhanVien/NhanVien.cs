@@ -11,7 +11,7 @@ namespace PhanMemQuanLyNhanVien
         private string diaChi;
         private int tuoi;
         private DateTime ngaySinh;
-        private int dienThoai;
+        private string dienThoai;
         private string maNhanVien;
         private int kinhNghiem;
         private TienLuong luongCoBan = new TienLuong();
@@ -25,7 +25,7 @@ namespace PhanMemQuanLyNhanVien
             diaChi = "unknown";
             tuoi = 0;
             ngaySinh = new DateTime(1990, 1, 1);
-            dienThoai = 0;
+            dienThoai = "unknown";
             maNhanVien = "unknown";
             kinhNghiem = 0;
             luongCoBan = new TienLuong();
@@ -33,7 +33,7 @@ namespace PhanMemQuanLyNhanVien
             tinhTrangLamViec = false;
             loaiNhanVien = 0;
         }
-        public NhanVien(string hoVaTen, string diaChi, int tuoi, int  ngay, int thang, int nam, int dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec,int loaiNhanVien)
+        public NhanVien(string hoVaTen, string diaChi, int tuoi, int  ngay, int thang, int nam, string dienThoai, string maNhanVien, int kinhNghiem, double luongCoBan, DateTime ngayBatDauLam, bool tinhTrangLamViec,int loaiNhanVien)
         {
             soLuong++;
             this.hoVaTen = hoVaTen;
@@ -70,12 +70,14 @@ namespace PhanMemQuanLyNhanVien
         }
         public void setTuoi(int tuoi)
         {
+            
             this.tuoi = tuoi;
         }
         public int getTuoi()
         {
             return tuoi;
         }
+
         public void setNgaySinh(DateTime ngaySinh)
         {
             this.ngaySinh = ngaySinh;
@@ -84,11 +86,11 @@ namespace PhanMemQuanLyNhanVien
         {
             return ngaySinh;
         }
-        public void setDienThoai (int dienThoai )
+        public void setDienThoai (string dienThoai )
         {
             this.dienThoai = dienThoai;
         }
-        public int getDienThoai()
+        public string getDienThoai()
         {
             return dienThoai;
         }
@@ -172,7 +174,7 @@ namespace PhanMemQuanLyNhanVien
             year = int.Parse(Console.ReadLine());
             ngaySinh = new DateTime(year, month, day);
             Console.Write("\nSo dien thoai: ");
-            dienThoai = int.Parse(Console.ReadLine());
+            dienThoai = Console.ReadLine();
             Console.Write("\nNam kinh nghiem: ");
             kinhNghiem = int.Parse(Console.ReadLine());
             Console.WriteLine("Ngay bat dau lam:");
@@ -232,7 +234,7 @@ namespace PhanMemQuanLyNhanVien
                 case 5:
                     {
                         Console.Write("So dien thoai moi: ");
-                        setDienThoai(int.Parse(Console.ReadLine()));
+                        setDienThoai(Console.ReadLine());
                         break;
                     }
                 case 6:

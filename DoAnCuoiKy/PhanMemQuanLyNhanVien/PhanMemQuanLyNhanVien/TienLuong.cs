@@ -27,7 +27,6 @@ namespace PhanMemQuanLyNhanVien
             }
         }
         
-
         public void setTienLuong(double tien)
         {
             this.tien = tien;
