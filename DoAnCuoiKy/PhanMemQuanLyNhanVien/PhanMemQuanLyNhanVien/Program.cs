@@ -8,10 +8,18 @@ namespace PhanMemQuanLyNhanVien
     {
         public static void Main(string[] args)
         {
-            static bool ktraSoDienThoai(string dienThoai)
+            static bool ktraEmail(string email)
+            {
+                if(email.IndexOf('@')!=-1&&email.Contains(".com"))
+                {
+                    return true;
+                }
+                return false;
+            }
+            static bool ktraSoDienThoai(string dienThoai ="")
             {
                 int index = 0;
-                while(dienThoai[index]<='9'&&dienThoai[index]>='0'&&index<=dienThoai.Length)
+                while(index < dienThoai.Length && dienThoai[index]<='9'&&dienThoai[index]>='0')
                 {
                     index++;
                 }
@@ -162,19 +170,37 @@ namespace PhanMemQuanLyNhanVien
                             {
                                 Console.Clear();
                                 string hoTen;
-                                string email;
-                                int dienThoai;
+                                string email = "";
+                                string dienThoai="";
                                 string matKhau;
                                 string xacNhanMatKhau;
                                 Console.Write("Ho va ten: ");
                                 hoTen = Console.ReadLine();
-                                Console.Write("\nEmail: ");
-                                email = Console.ReadLine();
-                                Console.Write("\nSo dien thoai: ");
-                                dienThoai = int.Parse(Console.ReadLine());
-                                Console.Write("\nNhap mat khau: ");
+                                do
+                                {
+                                    if (email.Length > 0)
+                                    {
+                                        Console.Write("Email phai chua kia tu @ va .com o cuoi, vui long nhap lai");
+                                        baCham();
+                                    }
+                                    Console.Write("Email: ");
+                                    email = Console.ReadLine();
+
+                                }
+                                while (!ktraEmail(email));
+                                do
+                                {
+                                    if (dienThoai.Length > 0)
+                                    {
+                                        Console.Write("So dien thoai vua nhap khong dung dinh dang so, vui long nhap lai");
+                                        baCham();
+                                    }
+                                    Console.Write("So dien thoai: ");
+                                    dienThoai = Console.ReadLine();
+                                } while (!ktraSoDienThoai(dienThoai));
+                                Console.Write("Nhap mat khau: ");
                                 matKhau = Console.ReadLine();
-                                Console.Write("\nXac nhan mat khau: ");
+                                Console.Write("Xac nhan mat khau: ");
                                 xacNhanMatKhau = Console.ReadLine();
                                 if (matKhau == xacNhanMatKhau)
                                 {
@@ -182,20 +208,15 @@ namespace PhanMemQuanLyNhanVien
                                     baCham();
                                     admin = new Admin(hoTen, email, dienThoai, matKhau);
                                     // ghi mat khau vao file
-                                    string[] thongTinTaiKhoan = { hoTen, email, dienThoai.ToString(), matKhau, xacNhanMatKhau };
+                                    string[] thongTinTaiKhoan = { hoTen, email, dienThoai, matKhau, xacNhanMatKhau };
                                     File.WriteAllLines("D:\\OOP\\OOP\\DoAnCuoiKy\\PhanMemQuanLyNhanVien\\PhanMemQuanLyNhanVien\\data.txt", thongTinTaiKhoan);
                                     Menu(admin, list);
                                 }
                                 break;
                             }
-
                     }
                 }
-                else if(choice == 2)
-                {
-                    
-
-                }
+                
             }
             static void Menu(Admin admin,List<NhanVien> list)
             {
@@ -293,7 +314,7 @@ namespace PhanMemQuanLyNhanVien
                     else if (choice == 3)
                     {
                         Console.Write("Nhap so dien thoai moi: ");
-                        admin.setDienThoai(int.Parse(Console.ReadLine()));
+                        admin.setDienThoai(Console.ReadLine());
                     }
                     else if (choice == 4)
                     {
@@ -428,6 +449,12 @@ namespace PhanMemQuanLyNhanVien
             }
             static void SuaThongTinNhanVien(List<NhanVien> list)
             {
+                if(list.Count== 0)
+                {
+                    Console.Write("Danh sach nhan vien rong");
+                    baCham();
+                    return;
+                }
                 int choice = 0;
                 int ketThuc = 2;
                 do
@@ -512,6 +539,12 @@ namespace PhanMemQuanLyNhanVien
             }
             static void TimKhiemThongTin(List<NhanVien>list)
             {
+                if (list.Count == 0)
+                {
+                    Console.Write("Danh sach nhan vien rong");
+                    baCham();
+                    return;
+                }
                 //ham nay de dieu them option xem thong tin nhan vien da tim duoc hay quay lai menu tim kiem theo
                 static void ConTrolXemthongTin(List<NhanVien> list,List< NhanVien> listTemp,string thongTinHopLe)
                 {
@@ -635,24 +668,18 @@ namespace PhanMemQuanLyNhanVien
                 static void SoDienThoai(List<NhanVien> list)
                 {
                     Console.Clear();
-                    Console.Write("Nhap so dien thoai nhan vien can tim kiem: ");
-                    int dienThoai;
+                    string dienThoai ="";
                     do
                     {
+                        if(dienThoai.Length >0)
+                        {
+                            Console.Write("So dien thoai vua nhap khong dung dinh dang do, vui long nhap lai");
+                            baCham();
+                        }
                         Console.Clear();
                         Console.Write("Nhap so dien thoai can tim kiem: ");
-                        try
-                        {
-                            dienThoai = int.Parse(Console.ReadLine());
-                        }
-                        catch
-                        {
-                            Console.Write("\n[WARNING]-Lua chon khong hop le,vui long nhap lai");
-                            baCham();
-                            continue;
-                        }
-                        break;
-                    } while (1 == 1);
+                        dienThoai = Console.ReadLine();
+                    } while (!ktraSoDienThoai(dienThoai));
                     int index = 1;
                     List<NhanVien> listTemp = new List<NhanVien>();
                     string thongTinHopLe = "";
@@ -747,6 +774,12 @@ namespace PhanMemQuanLyNhanVien
             }
             static void XoaNhanVien(List<NhanVien> list)
             {
+                if (list.Count == 0)
+                {
+                    Console.Write("Danh sach nhan vien rong");
+                    baCham();
+                    return;
+                }
                 int choice = 1;
                 int ketThuc = 2;
                 do
@@ -964,7 +997,7 @@ namespace PhanMemQuanLyNhanVien
                     thang = int.Parse(a[i++]);
                     nam = int.Parse(a[i++]);
                     nhanVien.setNgaySinh(new DateTime(nam, thang, ngay));
-                    nhanVien.setDienThoai(int.Parse(a[i++]));
+                    nhanVien.setDienThoai(a[i++]);
                     nhanVien.setKinhNghiem(int.Parse(a[i++]));
                     ngay = int.Parse(a[i++]);
                     thang = int.Parse(a[i++]);
@@ -976,7 +1009,7 @@ namespace PhanMemQuanLyNhanVien
                 string[] a = File.ReadAllLines("D:\\OOP\\OOP\\DoAnCuoiKy\\PhanMemQuanLyNhanVien\\PhanMemQuanLyNhanVien\\data.txt");
                 admin.setHoTen(a[0]);
                 admin.setEmail(a[1]);
-                admin.setDienThoai(int.Parse(a[2]));
+                admin.setDienThoai(a[2]);
                 admin.setMatKhau(a[3]);
                 for (int i = 4; i < a.Length; ++i)
                 {

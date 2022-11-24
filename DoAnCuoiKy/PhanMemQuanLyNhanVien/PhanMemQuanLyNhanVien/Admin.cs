@@ -8,10 +8,10 @@ namespace PhanMemQuanLyNhanVien
     {
         private string hoTen ="unknown";
         private string email ="unknown";
-        private int dienThoai =0;
+        private string dienThoai ="unknown";
         private string matKhau = "unknown" ;
         public Admin() { }
-        public Admin(string hoTen, string email, int dienThoai,string matKhau)
+        public Admin(string hoTen, string email, string dienThoai,string matKhau)
         {
             this.hoTen = hoTen;
             this.email = email;
@@ -34,11 +34,11 @@ namespace PhanMemQuanLyNhanVien
         {
             return email;
         }
-        public void setDienThoai(int dienThoai)
+        public void setDienThoai(string dienThoai)
         {
             this.dienThoai = dienThoai;
         }
-        public int getDienThoai()
+        public string getDienThoai()
         {
             return dienThoai;
         }

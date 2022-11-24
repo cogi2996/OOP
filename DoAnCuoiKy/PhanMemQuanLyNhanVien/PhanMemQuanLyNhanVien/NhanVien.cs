@@ -165,8 +165,27 @@ namespace PhanMemQuanLyNhanVien
             hoVaTen = Console.ReadLine();
             Console.Write("\nDia chi: ");
             diaChi = Console.ReadLine();
-            Console.Write("\nTuoi: ");
-            tuoi = int.Parse(Console.ReadLine());
+            int tuoi = 0;
+            do
+            {
+                Console.Write("\nTuoi: ");
+                try
+                {
+                    tuoi = int.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.Write("\nTuoi phai la mot so,vui long nhap lai");
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Console.Write(".");
+                        System.Threading.Thread.Sleep(600);//he thong ngu 600ms
+                    }
+                    Console.Write("\n");
+
+                }
+            } while (tuoi == 0);
+            
             Console.WriteLine("Ngay sinh: ");
             int day, month, year;
             day = int.Parse(Console.ReadLine()); //AddDays
